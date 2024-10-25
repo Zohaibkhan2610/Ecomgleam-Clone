@@ -6,10 +6,12 @@ import Connection from './Workspace/Connection.jsx'
 export default function Home() {
   return (
     <>
+      <div className='Home'>
       <Hero/>
       <Services/>
       <Work/>
       <Connection/>
+      </div>
       
     </>
   )

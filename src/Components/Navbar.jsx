@@ -10,9 +10,8 @@ import { faBlogger, faServicestack } from "@fortawesome/free-brands-svg-icons";
 export default function Navbar() {
   let [menuIcon, setmenuIcon] = useState(true);
   let closeMenu = () => setmenuIcon(!menuIcon);
-  const [activeButton, setActiveButton] = useState(0);
   
-  
+  const [activeButton, setActiveButton] = useState(0);  
   const handleClick = (index) => {
     setActiveButton(index);
   };
@@ -30,9 +29,9 @@ export default function Navbar() {
 
           <Link className={activeButton === 1 ? "page-links active" : "page-links"} onClick={() => handleClick(1)} to='/About'>About Us</Link>
           <Link className={activeButton === 2 ? "page-links active" : "page-links"} onClick={() => handleClick(2)} to='/Contact'>Contact Us</Link>
-          <Link className={activeButton === 3 ? "page-links active" : "page-links"} onClick={() => handleClick(3)} to='/Services'>Services</Link>
-          <Link className={activeButton === 4 ? "page-links active" : "page-links"} onClick={() => handleClick(4)} to='/Blogs'>Blogs</Link>
-          <Link className={activeButton === 5 ? "page-links active" : "page-links"} onClick={() => handleClick(5)} to='/Case-Studies'>Case Studies</Link>
+          <Link className={activeButton === 3 ? "page-links active" : "page-links"} onClick={() => handleClick(3)} to='/#ServicesSection'>Services</Link>
+          <Link className={activeButton === 4 ? "page-links active" : "page-links"} onClick={() => handleClick(4)} to=''>Blogs</Link>
+          <Link className={activeButton === 5 ? "page-links active" : "page-links"} onClick={() => handleClick(5)} to='/'>Case Studies</Link>
           </div>
           <div className="p-btn">
             <img src={call} alt="phone img" />
@@ -56,7 +55,14 @@ export default function Navbar() {
           <div onClick={closeMenu}><Link className={activeButton === 2 ? "page-linker active" : "page-linker"} onClick={() => handleClick(2)} to='/Contact'><FontAwesomeIcon icon={faContactBook}/>Contact Us</Link></div>
 
  
-          <div onClick={closeMenu}><Link className={activeButton === 3 ? "page-linker active" : "page-linker"} onClick={() => handleClick(3)} to='/Services'><FontAwesomeIcon icon={faServicestack}/>Services</Link></div>
+          <div onClick={closeMenu}>
+          <Link 
+          className={activeButton === 3 ? "page-linker active" : "page-linker"} onClick={() => handleClick(3)} 
+          to='/'>
+          <FontAwesomeIcon icon={faServicestack}/>
+          Services
+          </Link>
+          </div>
 
 
           <div onClick={closeMenu}><Link className={activeButton === 4 ? "page-linker active" : "page-linker"} onClick={() => handleClick(4)} to='/Blogs'><FontAwesomeIcon icon={faBlogger}/>Blogs</Link></div>

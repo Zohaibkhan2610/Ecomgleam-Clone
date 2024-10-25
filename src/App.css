@@ -8,6 +8,10 @@ background-color: rgb(0, 167, 151);
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
+.Home{
+  display: flex;
+  flex-direction: column;
+}
 .flex {
   display: flex;
   justify-content: space-between;
@@ -51,14 +55,14 @@ background-color: rgb(0, 167, 151);
 }
 .main-img {
   width: 50%;
-  height: 90%;
+  height: 80%;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   animation: right-to-left 1s ease-in-out;
 }
-.main-img img {
+.main-img > img {
   width: 80%;
   height: 80%;
   object-fit: contain;
